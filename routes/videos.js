@@ -25,7 +25,6 @@ router.get("/", (_req, res) => {
       image: video.image,
     };
   });
-  console.log("test");
   res.status(200).json(strippedData);
 });
 
@@ -36,7 +35,7 @@ router.post("/", (req, res) => {
     id: uuid(),
     title: req.body.title,
     channel: "myvideochannel",
-    image: `image${videosData.length - 1}.jpeg`,
+    image: "/uploadVideo.jpg",
     description: req.body.description,
     views: 0,
     likes: 0,
